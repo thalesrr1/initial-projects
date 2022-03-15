@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cadastro de Veiculos</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h3>Cadastre seu veículo para vender muito mais rápido!</h3>
+		</div>
+		<div class="form-container">
+			<div class="form-header">
+				<p>Cadastro</p>
+			</div>
+			<div class="form-body">
+				<h1 class="form-title">Venda facil seu veiculo!</h1>
+				<p>Descreva as características do seu veículo e marque todas os opicionais e características que ele possui</p>
+				<form>
+					<div class="box-input">
+						<label>Título do anúncio: <span class="required-field">*</span></label>
+						<input type="text" name="title" id="title" class="block" placeholder="Um titulo para seu veiculo" minlength="1" maxlength="30" required>
+						<input type="submit" value="Cadastrar" class="btn-submit">
+					</div>
+					<div>
+						<label>Preço do veiculo: <span class="required-file">*</span></label>
+						<input type="number" id="price"	name="price" class="block" required>
+					</div>
+				</form>
+			</div>
+		</div>	
+	</div>
+</body>
+</html>
