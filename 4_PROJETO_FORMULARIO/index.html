@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cadastro de Veiculos</title>
+	<title>Cadastro de Veículos</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
@@ -16,18 +16,104 @@
 				<p>Cadastro</p>
 			</div>
 			<div class="form-body">
-				<h1 class="form-title">Venda facil seu veiculo!</h1>
+				<h1 class="form-title">Venda facil seu veículo!</h1>
 				<p>Descreva as características do seu veículo e marque todas os opicionais e características que ele possui</p>
 				<form>
 					<div class="box-input">
 						<label>Título do anúncio: <span class="required-field">*</span></label>
-						<input type="text" name="title" id="title" class="block" placeholder="Um titulo para seu veiculo" minlength="1" maxlength="30" required>
-						<input type="submit" value="Cadastrar" class="btn-submit">
+						<input type="text" name="title" id="title" class="block" placeholder="Defina um titulo para seu veiculo" minlength="1" maxlength="30" required>
 					</div>
 					<div>
-						<label>Preço do veiculo: <span class="required-file">*</span></label>
+						<label for="price">Preço do veículo: <span class="required-file">*</span></label>
 						<input type="number" id="price"	name="price" class="block" required>
 					</div>
+					<div class="box-input">
+						<label for="description">Descrição do veículo: <span class="required-file">*</span></label>
+						<textarea name="description" id="description" class="block" cols="30"rows="10" required placeholder="Descreva as principais caracteristicas do seu veiculo"></textarea>
+					</div>
+					<div class="box-input">
+						<label for="unique-owner">Unico dono? <span class="required-file">*</span></label>
+						<select id="unique-owner" class="unique-owner" required>
+							<option value="">Selecione...</option>
+							<option value="1">Sim</option>
+							<option value="0">Não</option>
+						</select>
+					</div>
+					<div class="box-input">
+						<label for="brand">Marca: 
+						<span class="required-field">*</span></label>
+						<input type="text" name="brand" id="brand" class="block" placeholder="Marca do seu veiculo" required>
+					</div>
+						
+						<div class="box-input">
+							<label for="model">Modelo: 
+							<span class="required-field">*</span></label>
+							<input type="text" name="model" id="model" class="block" placeholder="Modelo do seu veiculo" required>
+						</div>
+						
+						<div class="box-input">
+							<label for="mileage">Quilometragem: 
+							<span class="required-field">*</span></label>
+							<input type="number" name="mileage" id="mileage" class="block" placeholder="Modelo do seu veiculo" required>
+						</div>
+						
+						<div class="box-input">
+							<label>Data de compra do seu veiculo: 
+							<span class="required-field">*</span></label>
+							<input type="date" name="purchase-date" id="purchase-date" class="block" required>
+						</div>
+						<div class="box-input">
+							<p>Câmbio: <span class="required-field">*</span></label></p>
+							<input type="radio" name="gear" id="manual">
+							<label for="manual">Manual</label>
+							<input type="radio" name="gear" id="auto">
+							<label for="auto">Automático</label>
+						</div>
+						<div class="optional_box">
+							<p>Opcionais: </p>
+								<ul class="optional_list">
+									<li>
+										<input type="checkbox" id="airbag" name="optional[]" values="airbag">
+										<label for="airbag">Airbag</label>
+									</li>
+									<li>
+										<input type="checkbox" id="alarm" name="optional[]" values="alarm">
+										<label for="alarm">Alarme</label>
+									</li>
+									<li>
+										<input type="checkbox" id="ac" name="optional[]" values="ac">
+										<label for="ac">Ar Condicionado</label>
+									</li>
+									<li>
+										<input type="checkbox" id="eletric-lock" name="optional[]" values="eletric-lock">
+										<label for="eletric-lock">Trava elétrica</label>
+									</li>
+								</ul>
+						</div>
+						<div class="optional_box">
+								<ul class="optional_list">
+									<li>
+										<input type="checkbox" id="eletric-window" name="optional[]" values="eletric-window">
+										<label for="eletric-window">Vidro Elétrico</label>
+									</li>
+									<li>
+										<input type="checkbox" id="speakers" name="optional[]" values="speakers">
+										<label for="speakers">Som</label>
+									</li>
+									<li>
+										<input type="checkbox" id="reverse-camera" name="optional[]" values="reverse-camera">
+										<label for="reverse-camera">Câmera de Ré</label>
+									<li>
+										<input type="checkbox" id="leather-seat" name="optional[]" values="leather-seat">
+										<label for="leather-seat">Banco de Couro</label>
+									</li>
+								</ul>
+						</div>
+						<div class="box-input">
+							<p>Envie imagens: <span class="required-field">*</span></p>
+							<input type="file" multiple accept="image/jpg, image/png" id="images" name="images" required>
+						</div>
+						<input type="submit" value="Cadastrar" class="btn-submit">
 				</form>
 			</div>
 		</div>	
